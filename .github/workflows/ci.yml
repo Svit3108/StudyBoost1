@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./backend 
+
+      - name: Run backend tests
+        run: npm test
+        working-directory: ./backend # Ensure you're in the backend directory
+
+  frontend-tests:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./frontend 
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: ./frontend 
+
+      - name: Run frontend tests
+        run: npm test
+        working-directory: ./frontend 

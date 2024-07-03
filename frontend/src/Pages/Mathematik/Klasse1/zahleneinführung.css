@@ -1,0 +1,63 @@
+.zahleneinfuehrung {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #5da5f1;
+}
+
+
+main {
+  padding: 2em;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.number-item {
+  background-color: #f6f0f0;
+  border: 1px solid #cbcbcb;
+  padding: 1em;
+  text-align: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.image-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1em;
+  flex: 1 1 calc(50% - 2em);
+}
+
+.video-container {
+  margin: 2em 0;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 400px;
+}
+
