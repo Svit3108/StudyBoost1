@@ -14,7 +14,7 @@ function Register() {
     const onSubmit = async e => {
       e.preventDefault();
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/register', formData);
+        const res = await axios.post('http://backend:5000/api/auth/register', formData);
         localStorage.setItem('token', res.data.token);
         setMessage('Registration successful!');
       } catch (err) {

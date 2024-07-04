@@ -42,11 +42,7 @@
     "test": "jest",
     "lint": "eslint src"
   },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-dom/extend-expect"
-    ]
-  },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
