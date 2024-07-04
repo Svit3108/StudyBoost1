@@ -15,7 +15,6 @@ const Header = () => {
             <nav>
                 <ul className="flex flex-row gap-5">
                     <li><Link to="/" className="font-medium hover:underline">Home</Link></li>
-                    <li><Link to="/courses" className="font-medium hover:underline">Kurse</Link></li>
                     <li><Link to="/help" className="font-medium hover:underline">Hilfe</Link></li>
                     <li><Link to="/login" className="bg-blue-600 p-2 rounded-lg text-white border border-b-4 border-blue-800 hover:border-b-2">Login</Link></li>
                     <li><Link to="/register" className="bg-blue-600 p-2 rounded-lg text-white border border-b-4 border-blue-800 hover:border-b-2">Register</Link></li>
