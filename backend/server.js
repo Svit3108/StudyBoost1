@@ -8,7 +8,12 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 // Enable CORS
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: '*', // Allow all HTTP methods
+  credentials: true, // Allow cookies
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+}));
 
 
 // Connect to MongoDB
@@ -22,5 +27,5 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

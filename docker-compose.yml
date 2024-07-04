@@ -7,8 +7,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:80"
-    networks:
-      - app-network
+      
 
   backend:
     build:
@@ -16,9 +15,7 @@ services:
       dockerfile: Dockerfile
     env_file: "backend/.env"
     ports:
-      - "5000:5000"
-    networks:
-      - app-network
+      - "5001:5001"
     depends_on:
       - mongo
 
@@ -26,9 +23,4 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
-    networks:
-      - app-network
 
-networks:
-  app-network:
-    driver: bridge

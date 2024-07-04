@@ -1,31 +1,30 @@
-FROM node:16 AS build
+# Stage 1: Node.js-Basisimage zum Bauen der App
+FROM node:lts as build-stage
 
-# Set the working directory
-WORKDIR /usr/src/app
+# Arbeitsverzeichnis im Container festlegen
+WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Abhängigkeiten installieren
 COPY package*.json ./
+RUN npm ci
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the frontend code
+# Quellcode kopieren
 COPY . .
 
-# Build the frontend assets
+# Anwendung bauen
 RUN npm run build
 
-# Production Stage
-FROM nginx:stable-alpine
+# Stage 2: Nginx zum Ausführen der App
+FROM nginx:alpine as production-stage
 
-# Copy the built frontend assets from the previous stage
-COPY --from=build /usr/src/app/build /usr/share/nginx/html
+# Gebaute Dateien kopieren
+COPY --from=build-stage /app/build /usr/share/nginx/html
 
-# Copy custom Nginx configuration, if you have one
+# Nginx-Konfigurationsdatei hinzufügen (optional)
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 80 for the frontend server
+# Standardmäßig verwendet Nginx Port 80
 EXPOSE 80
 
-# Command to start Nginx
+# Nginx im Vordergrund laufen lassen
 CMD ["nginx", "-g", "daemon off;"]

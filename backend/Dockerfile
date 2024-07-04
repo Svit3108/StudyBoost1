@@ -16,7 +16,7 @@ RUN npm rebuild bcrypt --build-from-source
 COPY . .
 
 # Expose port 5000
-EXPOSE 5000
+EXPOSE 5001
 
 # Start the application
 CMD ["node", "server.js"]
