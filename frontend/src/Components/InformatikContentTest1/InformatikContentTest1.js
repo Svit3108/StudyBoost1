@@ -46,7 +46,7 @@ const InformatikContentTest1 = () => {
                 <nav className="w-full mt-8">
                     <ul className="flex flex-wrap justify-center gap-8">
                         <li>
-                            <Link to="/Informatik/Klasse1Informatikeinführung" className="flex items-center bg-blue-600 p-3 rounded-lg text-white shadow-md hover:bg-blue-700 transition">
+                            <Link to="/Informatik/Klasse1Informatikeinfuehrung" className="flex items-center bg-blue-600 p-3 rounded-lg text-white shadow-md hover:bg-blue-700 transition">
                                 Einführung in die Informatik
                             </Link>
                         </li>

@@ -1,11 +1,11 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import './Informatikeinführung.css';
+import './Informatikeinfuehrung.css';
 
 
-function Informatikeinführung() {
+function Informatikeinfuehrung() {
   return (
-    <div className="informatikeinfühhrung">
+    <div className="Informatikeinfuehrung">
       {/* Header */}
       <header className="Einformatikeinführung-header">
         <h1><strong>Einführung in die Informatik</strong></h1>
@@ -76,4 +76,4 @@ function Informatikeinführung() {
   );
 }
 
-export default Informatikeinführung;
+export default Informatikeinfuehrung;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import './Geometrie.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 
 const Fragen = [

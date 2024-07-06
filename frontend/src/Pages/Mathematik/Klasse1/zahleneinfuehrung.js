@@ -1,9 +1,9 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import './zahleneinführung.css';
+import './zahleneinfuehrung.css';
 import { Link } from 'react-router-dom';
 
-function Zahleneinführung() {
+function zahleneinfuehrung() {
   return (
     <div className="zahleneinfuehrung">
       <nav>
@@ -88,4 +88,4 @@ function Zahleneinführung() {
   );
 }
 
-export default Zahleneinführung;
+export default zahleneinfuehrung;

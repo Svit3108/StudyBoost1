@@ -54,7 +54,7 @@ const DeutschContentTest1 = () => {
                 <nav className="w-full mt-8">
                     <ul className="flex flex-wrap justify-center gap-8">
                         <li>
-                            <Link to="/Deutsch/Klasse1Alphabeteinführung" className="flex items-center bg-purple-600 p-3 rounded-lg text-white shadow-md hover:bg-purple-700 transition">
+                            <Link to="/Deutsch/Klasse1Alphabeteinfuehrung" className="flex items-center bg-purple-600 p-3 rounded-lg text-white shadow-md hover:bg-purple-700 transition">
                                 Alphabet und Buchstaben
                             </Link>
                         </li>

@@ -1,15 +1,15 @@
 import React from 'react';
 import YouTube from 'react-youtube';
-import './Alphabeteinführung.css';
+import './Alphabeteinfuehrung.css';
 import appleImage from '../../../assets/apple-image.png';
 import ballImage from '../../../assets/ball-image.png';
-function Alphabeteinführung() {
+function Alphabeteinfuehrung() {
   return (
-    <div className="Alphabeteinführung">
+    <div className="Alphabeteinfuehrung">
       <div>
   
     </div>
-      <header className="Alphabeteinführung-header">
+      <header className="Alphabeteinfuehrung-header">
         <h1>📚 <strong>Einführung in das Alphabet</strong> 📚</h1>
       </header>
       <nav>
@@ -92,4 +92,4 @@ function Alphabeteinführung() {
   );
 }
 
-export default Alphabeteinführung;
+export default Alphabeteinfuehrung;

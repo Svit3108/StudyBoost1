@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Hausaufgabenhilfe = () => {
+const Hausaufgaben = () => {
     const [homeworkText, setHomeworkText] = useState('');
     const [file, setFile] = useState(null);
     const [responseMessage, setResponseMessage] = useState('');
@@ -103,4 +103,4 @@ const Hausaufgabenhilfe = () => {
     );
 };
 
-export default Hausaufgabenhilfe;
+export default Hausaufgaben;

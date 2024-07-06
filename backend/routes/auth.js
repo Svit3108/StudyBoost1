@@ -6,6 +6,7 @@ const auth = require('../middleware/auth');
 const multer = require('multer');
 const cors = require('cors');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const router = express.Router();
 
@@ -78,4 +79,33 @@ router.post('/login', async (req, res) => {
     res.status(500).send('Server error');
   }
 });
+
+// Route für das Senden von E-Mails
+router.post('/send-email', async (req, res) => {
+  const { name, subject, date, message } = req.body;
+
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'armelthierydjepang@gmail', // Ihre E-Mail-Adresse
+      pass: '716&JUPRNOke' // Ihr E-Mail-Passwort
+    }
+  });
+
+  let mailOptions = {
+    from: 'your-email@gmail.com',
+    to: 'adjepang@yahoo.fr',
+    subject: `Neue Nachricht von ${name}: ${subject}`,
+    text: `Nachricht: ${message}\n\nDatum: ${date}`
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ msg: 'E-Mail erfolgreich gesendet' });
+  } catch (error) {
+    console.error('Fehler beim Senden der E-Mail:', error);
+    res.status(500).json({ msg: 'Fehler beim Senden der E-Mail' });
+  }
+});
+
 module.exports = router;

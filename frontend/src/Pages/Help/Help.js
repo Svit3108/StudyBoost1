@@ -19,11 +19,11 @@ const Help = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5001/api/auth/submit', formData);
-            alert('Formular wurde erfolgreich abgeschickt:\n' + JSON.stringify(response.data, null, 2));
+            const response = await axios.post('http://localhost:5001/api/auth/send-email', formData);
+            alert('Nachricht wurde erfolgreich abgeschickt:\n' + JSON.stringify(response.data, null, 2));
         } catch (error) {
-            console.error('Es gab einen Fehler beim Absenden des Formulars', error);
-            alert('Es gab einen Fehler beim Absenden des Formulars');
+            console.error('Es gab einen Fehler beim Absenden der Nachricht', error);
+            alert('Es gab einen Fehler beim Absenden der Nachricht');
         }
     };
 
@@ -33,10 +33,10 @@ const Help = () => {
                 onSubmit={handleSubmit} 
                 className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg"
             >
-                <h1 className="text-2xl font-bold mb-6 text-center">Hilfe anfordern</h1>
+                <h1 className="text-2xl font-bold mb-6 text-center">Nachricht senden</h1>
                 
                 <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name des Schülers:</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
                     <input
                         type="text"
                         id="name"
@@ -49,7 +49,7 @@ const Help = () => {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Fach:</label>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Betreff:</label>
                     <input
                         type="text"
                         id="subject"
@@ -62,7 +62,7 @@ const Help = () => {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="date" className="block text-sm font-medium text-gray-700">Termin:</label>
+                    <label htmlFor="date" className="block text-sm font-medium text-gray-700">Datum:</label>
                     <input
                         type="date"
                         id="date"
@@ -83,6 +83,7 @@ const Help = () => {
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm"
                         rows="4"
+                        required
                     ></textarea>
                 </div>
 
