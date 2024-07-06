@@ -14,10 +14,12 @@ import Error from './Pages/Error/Error';
 import Hausaufgabenhilfe from './Pages/Hausaufgabenhilfe/Hausaufgabenhilfe';
 import Notenverbesserung from './Pages/Notenverbesserung/Notenverbesserung';
 import Register from './Pages/Register/Register';
+import Physik from './Pages/Physik/Physik';
 import Mathematik from './Pages/Mathematik/Mathematik';
 import Informatik from './Pages/Informatik/Informatik';
 import Deutsch from './Pages/Deutsch/Deutsch';
 import MathematikContent from './Components/MathematikContent/MathematikContent';
+import PhysikContent from './Components/PhysikContent/PhysikContent';
 import DeutschContent from './Components/DeutschContent/DeutschContent';
 import InformatikContent from './Components/InformatikContent/InformatikContent';
 import InformatikContentTest1 from './Components/InformatikContentTest1/InformatikContentTest1';
@@ -78,6 +80,7 @@ function App() {
           <Route path="/Mathematik/Klasse1formenmuster" element={<Klasse1formenmuster />} />
           <Route path="/MathematikContent" element={<MathematikContent />} />
           <Route path="/InformatikContent" element={<InformatikContent />} />
+          <Route path="/PhysikContent" element={<PhysikContent />} />
           <Route path="/DeutschContent" element={<DeutschContent />} />
           <Route path="/MathematikContentTest1" element={<MathematikContentTest1 />} />
         

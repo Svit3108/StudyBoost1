@@ -1,17 +1,12 @@
 import React from 'react'
-import Header from '../../Components/Header/Header'
-import Footer from '../../Components/Footer/Footer'
+import PhysikContent from '../../Components/PhysikContent/PhysikContent'
 
-const Physik = () => {
+const Physik= () => {
     return (
         <div>
-            <Header />
-            <h1>Physik</h1>
-    
-
-            <Footer />
+            <PhysikContent />
         </div>
     )
 }
 
-export default  Physik
+export default Physik

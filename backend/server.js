@@ -12,9 +12,8 @@ app.use(cors({
   origin: '*', // Allow all origins
   methods: '*', // Allow all HTTP methods
   credentials: true, // Allow cookies
-  allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'] // Allow these headers
 }));
-
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
