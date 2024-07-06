@@ -3,7 +3,39 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
+const multer = require('multer');
+const cors = require('cors');
+const path = require('path');
+
 const router = express.Router();
+
+//Multer-Konfiguration für Datei-Upload
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Verzeichnis für hochgeladene Dateien
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname); // Dateiname anpassen, um Konflikte zu vermeiden
+  }
+});
+
+const upload = multer({ storage: storage });
+
+// POST-Endpunkt für Hausaufgaben mit Authentifizierung
+router.post('/Hausaufgabe', auth, upload.single('file'), (req, res) => {
+  const { homeworkText } = req.body; // Text der Hausaufgabe aus dem Request Body
+  const file = req.file; // Hochgeladene Datei aus dem Multer Upload
+
+  // Beispiel: Speichern in einer Datenbank oder anderen Logik
+  // Für dieses Beispiel speichern wir nur den Dateinamen
+  const response = {
+    msg: 'Hausaufgabe erfolgreich gespeichert',
+    homeworkText,
+    file
+  };
+
+  res.json(response);
+});
 
 // Register
 router.post('/register', async (req, res) => {

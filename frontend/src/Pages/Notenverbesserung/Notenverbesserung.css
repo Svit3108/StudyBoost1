@@ -1,0 +1,65 @@
+/* Noteverbesserung.css */
+
+.background-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  color: #333;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 64rem; /* max-w-4xl */
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 2.5rem; /* text-4xl */
+  font-weight: bold;
+  text-align: center;
+  color: #5a2d82; /* text-purple-900 */
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  padding: 1.5rem; /* p-6 */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-heading {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold;
+  color: #5a2d82; /* text-purple-900 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.card-text {
+  font-size: 1.125rem; /* text-lg */
+  color: #4a4a4a; /* text-gray-800 */
+}

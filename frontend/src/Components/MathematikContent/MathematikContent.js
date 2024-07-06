@@ -43,13 +43,13 @@ class MathematikContent extends React.Component {
                         </li>
                 
                         <li>
-                            <Link to="/mathematik/Klasse2" className="flex items-center bg-green-600 p-3 rounded-lg text-white shadow-md hover:bg-green-700 transition">
+                            <Link to="/mathematik/Klasse2Test" className="flex items-center bg-green-600 p-3 rounded-lg text-white shadow-md hover:bg-green-700 transition">
                                 <img src={MathImage} alt="Klasse2" className="h-10 w-10 mr-2 rounded-full object-cover" />
                                 Klasse 2 
                             </Link>
                         </li>
                         <li>
-                            <Link to="/mathematik/Klasse3" className="flex items-center bg-orange-600 p-3 rounded-lg text-white shadow-md hover:bg-orange-700 transition">
+                            <Link to="/mathematik/Klasse3Test" className="flex items-center bg-orange-600 p-3 rounded-lg text-white shadow-md hover:bg-orange-700 transition">
                                 <img src={MathImage} alt="Klasse3" className="h-10 w-10 mr-2 rounded-full object-cover" />
                                 Klasse 3 
                             </Link>

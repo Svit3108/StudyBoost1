@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
 
 const Hausaufgabenhilfe = () => {
     // Definiert die State-Hooks für die Komponente
@@ -12,9 +12,9 @@ const Hausaufgabenhilfe = () => {
         setHomeworkText(e.target.value); // Aktualisiert den State mit dem neuen Textwert
     };
 
-
+    // Handler für die Änderung der hochgeladenen Datei
     const handleFileChange = (e) => {
-        setFile(e.target.files[0]); 
+        setFile(e.target.files[0]); // Setzt die hochgeladene Datei im State
     };
 
     // Handler für das Absenden des Formulars
@@ -43,13 +43,16 @@ const Hausaufgabenhilfe = () => {
             formData.append('file', file); // Fügt die Datei zu FormData hinzu
 
             // POST-Anfrage an den Server mit axios
-            const response = await axios.post('/api/homework', formData, {
+            const response = await axios.post('/A/Hausaufgabe', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data' // Setzt den Header für die Anfrage
                 }
             });
 
             console.log('Serverantwort:', response.data); // Konsolenausgabe der Serverantwort
+
+            // Hier kannst du weitere Logik hinzufügen, basierend auf der Serverantwort
+
         } catch (error) {
             console.error('Fehler beim Speichern der Hausaufgabe:', error); // Gibt den Fehler in der Konsole aus
             throw error; // Weiterwerfen des Fehlers für eine höhere Fehlerbehandlung
@@ -57,8 +60,8 @@ const Hausaufgabenhilfe = () => {
     };
 
     return (
-        <div className="bg-gray-100 min-h-screen"> 
-            <div className="container mx-auto p-4"> 
+        <div className="bg-gray-100 min-h-screen"> {/* Hintergrundfarbe Grau */}
+            <div className="container mx-auto p-4"> {/* Zentrierter Inhalt */}
                 <h1 className="font-bold text-2xl mb-4">Hausaufgabenhilfe</h1> {/* Titel der Seite */}
 
                 <form onSubmit={handleSubmit} className="max-w-lg bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">

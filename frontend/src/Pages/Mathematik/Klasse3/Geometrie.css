@@ -1,0 +1,98 @@
+.formen-muster-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.introduction {
+  margin-bottom: 20px;
+}
+
+.shapes {
+  margin-bottom: 20px;
+}
+
+.shape-card-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shape-card {
+  text-align: center;
+}
+
+.shape {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.exercise {
+  margin-bottom: 20px;
+}
+
+.question {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.question p {
+  margin-bottom: 10px;
+}
+
+.question button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.question button:hover {
+  background-color: #f0f0f0;
+}
+
+.feedback {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback p {
+  margin-bottom: 10px;
+}
+
+.feedback span {
+  font-size: 50px;
+}
+
+.next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
+
+.video-section {
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-around;
+}

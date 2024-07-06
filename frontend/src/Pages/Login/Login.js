@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     console.log('Form Submitted:', formData);  // Log formData before sending request
     try {
-      const res = await axios.post('http://localhost:5001/api/auth/login', formData);
+      const res = await axios.post('http://localhost:5000/api/auth/login', formData);
       console.log('Response:', res);  // Log the entire response object for debugging
       const token = res.data.token;
       console.log('JWT Token:', token);  // Display the token in the console
