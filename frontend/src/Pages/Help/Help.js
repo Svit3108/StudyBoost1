@@ -19,7 +19,7 @@ const Help = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5001/api/auth/send-email', formData);
+            const response = await axios.post('http://3.123.19.43:5001/api/auth/send-email', formData);
             alert('Nachricht wurde erfolgreich abgeschickt:\n' + JSON.stringify(response.data, null, 2));
         } catch (error) {
             console.error('Es gab einen Fehler beim Absenden der Nachricht', error);

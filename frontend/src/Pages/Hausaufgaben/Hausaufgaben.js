@@ -41,7 +41,7 @@ const Hausaufgaben = () => {
             const token = localStorage.getItem('token');
 
             // Add the token to the headers
-            const response = await axios.post('http://localhost:5000/api/auth/Hausaufgabe', formData, {
+            const response = await axios.post('http://3.123.19.43:5001/api/auth/Hausaufgabe', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'x-auth-token': token // Add the token to the headers
